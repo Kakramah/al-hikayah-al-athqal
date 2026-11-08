@@ -32,3 +32,4 @@
 - **الدور:** ذاكرة الشهداء الصامتة: جدار حجري قديم عليه صور شهداء لا يحتاجون لبودكاست كي تصبح تضحيتهم حقيقة.
 - **البرومبت:**
   Interior documentary photograph of a historic weathered Syrian limestone wall inside a quiet room. Pinned to an aged wooden board with oxidized nails are several faded archival monochrome and sepia portraits of unnamed revolutionary martyrs and young men. A dramatic shaft of natural 4000K morning sunlight cuts through high stone masonry, illuminating floating dust motes and highlighting the tactile texture of chiseled stone and rough paper edges. Shot on 50mm f/1.8 prime lens, realistic film grain, sacred quietude, memory standing above ephemeral media trends.
+

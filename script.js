@@ -1,12 +1,14 @@
 /**
- * الحكاية الأثقل · تفاعل وتمرير سلس وفق ميزان خلدون عكرمة وقواعد الويب 5.11
+ * الحكاية الأثقل · تفاعل وتمرير سلس وموجة أثير حية وكاشف الثنائية
+ * وفق ميزان خلدون عكرمة وقواعد الويب 5.11
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
   // 1. شريط القراءة وشريط التنقل العلوي
   const progressBar = document.querySelector('.reading-progress-bar');
   const siteNav = document.querySelector('.site-nav');
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -26,7 +28,78 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
-  // 2. السرد الغامر بالتمرير (Scrollytelling Stages)
+  // 2. كانفاس موجة الأثير التفاعلية في شاشة الهيرو
+  const waveCanvas = document.getElementById('hero-wave-canvas');
+  if (waveCanvas && !prefersReducedMotion.matches) {
+    const ctx = waveCanvas.getContext('2d');
+    let width = 0;
+    let height = 0;
+    let animationFrameId = null;
+    let time = 0;
+    let mouseInfluence = 0.5;
+
+    function resizeCanvas() {
+      width = waveCanvas.width = waveCanvas.offsetWidth;
+      height = waveCanvas.height = waveCanvas.offsetHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas, { passive: true });
+    resizeCanvas();
+
+    window.addEventListener('mousemove', (e) => {
+      const normalizedY = e.clientY / window.innerHeight;
+      mouseInfluence = 0.3 + normalizedY * 0.7;
+    }, { passive: true });
+
+    function drawWave() {
+      if (window.scrollY > window.innerHeight) {
+        animationFrameId = requestAnimationFrame(drawWave);
+        return;
+      }
+
+      ctx.clearRect(0, 0, width, height);
+
+      const centerY = height * 0.72;
+      const wavesCount = 3;
+
+      for (let i = 0; i < wavesCount; i++) {
+        ctx.beginPath();
+        ctx.lineWidth = 1.2;
+        
+        // ألوان ذهبية كهرمانية ناعمة بتدرج شفاف
+        if (i === 0) {
+          ctx.strokeStyle = 'rgba(201, 165, 87, 0.45)';
+        } else if (i === 1) {
+          ctx.strokeStyle = 'rgba(223, 188, 109, 0.28)';
+        } else {
+          ctx.strokeStyle = 'rgba(201, 165, 87, 0.15)';
+        }
+
+        const step = 8;
+        const speed = 0.02 + i * 0.008;
+        const waveLength = 0.006 - i * 0.0012;
+        const amplitude = (24 + i * 16) * mouseInfluence;
+
+        for (let x = 0; x <= width; x += step) {
+          const y = centerY + Math.sin(x * waveLength + time * speed + i) * amplitude * Math.sin((x / width) * Math.PI);
+          if (x === 0) {
+            ctx.moveTo(x, y);
+          } else {
+            ctx.lineTo(x, y);
+          }
+        }
+
+        ctx.stroke();
+      }
+
+      time += 1;
+      animationFrameId = requestAnimationFrame(drawWave);
+    }
+
+    drawWave();
+  }
+
+  // 3. السرد الغامر بالتمرير (Scrollytelling Stages)
   const stepCards = document.querySelectorAll('.step-card');
   const stageLayers = document.querySelectorAll('.stage-layer');
 
@@ -36,11 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (entry.isIntersecting) {
           const stepIndex = entry.target.getAttribute('data-step');
           
-          // تحديث حالة البطاقة النشطة
           stepCards.forEach((card) => card.classList.remove('active'));
           entry.target.classList.add('active');
 
-          // تحديث طبقة العرض المطابقة
           stageLayers.forEach((layer) => {
             if (layer.getAttribute('data-layer') === stepIndex) {
               layer.classList.add('active');
@@ -59,7 +130,78 @@ document.addEventListener('DOMContentLoaded', () => {
     stepCards.forEach((card) => scrollyObserver.observe(card));
   }
 
-  // 3. الخريطة التفاعلية للمسارين (الخارج والداخل)
+  // 4. كاشف الثنائية التفاعلي (Split Lens Slider)
+  const splitContainer = document.querySelector('.split-slider-container');
+  const splitLayerStudio = document.querySelector('.split-view-layer.layer-studio');
+  const splitHandle = document.querySelector('.split-handle');
+
+  if (splitContainer && splitLayerStudio && splitHandle) {
+    let isDragging = false;
+
+    function setSplitPosition(clientX) {
+      const rect = splitContainer.getBoundingClientRect();
+      let percent = ((clientX - rect.left) / rect.width) * 100;
+
+      if (percent < 5) percent = 5;
+      if (percent > 95) percent = 95;
+
+      splitLayerStudio.style.width = `${percent}%`;
+      splitHandle.style.left = `${percent}%`;
+    }
+
+    splitContainer.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      setSplitPosition(e.clientX);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      setSplitPosition(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    // دعم اللمس على الهاتف
+    splitContainer.addEventListener('touchstart', (e) => {
+      if (e.touches.length > 0) {
+        isDragging = true;
+        setSplitPosition(e.touches[0].clientX);
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (!isDragging || e.touches.length === 0) return;
+      setSplitPosition(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    // دعم الأسهم بلوحة المفاتيح
+    splitHandle.setAttribute('tabindex', '0');
+    splitHandle.setAttribute('role', 'slider');
+    splitHandle.setAttribute('aria-label', 'مقبض كاشف الثنائية');
+    splitHandle.setAttribute('aria-valuenow', '50');
+
+    splitHandle.addEventListener('keydown', (e) => {
+      let currentVal = parseFloat(splitLayerStudio.style.width) || 50;
+      if (e.key === 'ArrowRight') {
+        currentVal = Math.min(95, currentVal + 5);
+      } else if (e.key === 'ArrowLeft') {
+        currentVal = Math.max(5, currentVal - 5);
+      } else {
+        return;
+      }
+      splitLayerStudio.style.width = `${currentVal}%`;
+      splitHandle.style.left = `${currentVal}%`;
+      splitHandle.setAttribute('aria-valuenow', currentVal.toString());
+    });
+  }
+
+  // 5. الخريطة التفاعلية للمسارين (الخارج والداخل)
   const mapTabButtons = document.querySelectorAll('.map-tab-btn');
   const mapSvgAbroad = document.getElementById('map-group-abroad');
   const mapSvgInside = document.getElementById('map-group-inside');
@@ -103,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. معرض الصور التفاعلي (Lightbox) مع التنقل بالأسهم
+  // 6. معرض الصور التفاعلي (Lightbox) مع التنقل بالأسهم
   const galleryImages = Array.from(document.querySelectorAll('img[data-title]'));
   const lightbox = document.getElementById('lightbox');
   let currentIndex = 0;
@@ -169,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. درج المصادر والمراجع (مغلق افتراضياً)
+  // 7. درج المصادر والمراجع (مغلق افتراضياً)
   const sourcesToggle = document.querySelector('.sources-toggle');
   const sourcesDrawer = document.querySelector('.sources-drawer');
 
@@ -181,7 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. زر المشاركة
+  // 8. زر المشاركة
   const shareBtn = document.querySelector('.share-btn');
   if (shareBtn) {
     shareBtn.addEventListener('click', async () => {
@@ -212,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. نموذج التواصل (Web3Forms)
+  // 9. نموذج التواصل (Web3Forms)
   const contactForm = document.querySelector('.footer-form');
   const feedbackMsg = document.querySelector('.form-feedback');
   let lastSubmitTime = 0;

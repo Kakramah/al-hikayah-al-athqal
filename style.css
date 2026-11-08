@@ -1,6 +1,7 @@
 /* ==========================================================================
-   الحكاية الأثقل · تصميم وتطوير وفق ميزان خلدون عكرمة وقواعد الويب 5.11
-   مستوحى من المرجع 18 (التحقيق الغامر) والمرجع 13 (المقارنة الأخلاقية)
+   الحكاية الأثقل · الأسلوب الاستثنائي المتكامل
+   تصميم وتطوير وفق ميزان خلدون عكرمة وقواعد الويب 5.11
+   دمج: موجة الأثير التفاعلية + السرد التحريري الفاخر + كاشف الثنائية + الختم الحجري
    ========================================================================== */
 
 @font-face {
@@ -36,37 +37,38 @@
 }
 
 :root {
-  --bg-deep: #0a0d10;
-  --bg-deepest: #06080a;
-  --bg-climax: #07090b;
+  --bg-deep: #090c0f;
+  --bg-deepest: #050709;
+  --bg-climax: #080a0d;
   --bg-svg: #0b0e12;
-  --bg-base: #101418;
-  --bg-surface: #171d23;
-  --bg-surface-raised: #202730;
-  --bg-card: rgba(23, 29, 35, 0.88);
-  --border-subtle: rgba(255, 255, 255, 0.08);
+  --bg-base: #0f1317;
+  --bg-surface: #151a20;
+  --bg-surface-raised: #1c222b;
+  --bg-card: rgba(21, 26, 32, 0.85);
+  
+  --border-subtle: rgba(255, 255, 255, 0.07);
   --border-accent: rgba(201, 165, 87, 0.35);
 
   --white: #ffffff;
   --text-primary: #e6ebed;
   --text-secondary: #adb9be;
-  --text-muted: #78878e;
+  --text-muted: #74838a;
   
   --accent-gold: #c9a557;
   --accent-gold-light: #dfbc6d;
-  --accent-gold-soft: rgba(201, 165, 87, 0.15);
+  --accent-gold-soft: rgba(201, 165, 87, 0.14);
   --accent-red: #c54438;
-  --accent-red-soft: rgba(197, 68, 56, 0.15);
+  --accent-red-soft: rgba(197, 68, 56, 0.14);
   --accent-cyan: #4a9ea8;
   --color-success: #58c77e;
 
   --font-main: 'IBM Plex Sans Arabic', 'Tajawal', sans-serif;
   --container-max: 1180px;
-  --reading-max: 720px;
+  --reading-max: 740px;
   --nav-height: 64px;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --duration-fast: 200ms;
+  --duration-fast: 180ms;
   --duration-normal: 260ms;
 }
 
@@ -95,7 +97,7 @@ body {
   direction: rtl;
 }
 
-/* شريط القراءة التقدمي في الأعلى بتدرج ومحور تحول */
+/* شريط القراءة التقدمي في الأعلى بتدرج ومحور تحول مركب */
 .reading-progress-bar {
   position: fixed;
   top: 0;
@@ -128,7 +130,7 @@ body {
 }
 
 .site-nav.scrolled {
-  background-color: rgba(10, 13, 16, 0.88);
+  background-color: rgba(9, 12, 15, 0.88);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -159,7 +161,7 @@ body {
   color: var(--accent-gold);
 }
 
-/* شاشة الافتتاحية الهيرو */
+/* 1. شاشة الافتتاحية الهيرو مع كانفاس موجة الأثير التفاعلية */
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -182,7 +184,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: brightness(0.72) contrast(1.08);
+  filter: brightness(0.68) contrast(1.1);
   cursor: zoom-in;
 }
 
@@ -191,16 +193,27 @@ body {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(10, 13, 16, 0.4) 0%,
-    rgba(10, 13, 16, 0.75) 60%,
+    rgba(9, 12, 15, 0.35) 0%,
+    rgba(9, 12, 15, 0.75) 55%,
     var(--bg-deep) 100%
   );
   z-index: 2;
 }
 
+/* كانفاس موجة الأثير الحي */
+.hero-wave-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.75;
+}
+
 .hero-content {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   max-width: var(--container-max);
   margin: 0 auto;
   width: 100%;
@@ -221,12 +234,12 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(2.3rem, 5.2vw, 4rem);
   font-weight: 700;
   line-height: 1.25;
   color: var(--white);
   margin-bottom: 1.25rem;
-  max-width: 900px;
+  max-width: 920px;
 }
 
 .hero-lead {
@@ -252,12 +265,12 @@ body {
   color: var(--accent-gold);
 }
 
-/* تخطيط السرد بالتمرير الغامر Scrollytelling */
+/* 2. السرد التحريري الغامر (Scrollytelling) */
 .scrolly-container {
   position: relative;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 4.5rem 1.5rem;
 }
 
 .scrolly-split {
@@ -277,7 +290,7 @@ body {
   overflow: hidden;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
 }
 
 .stage-layer {
@@ -309,8 +322,8 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  padding: 1rem 1.25rem;
-  background: linear-gradient(180deg, transparent, rgba(10, 13, 16, 0.92));
+  padding: 1.1rem 1.25rem;
+  background: linear-gradient(180deg, transparent, rgba(9, 12, 15, 0.94));
   font-size: 0.82rem;
   color: var(--text-secondary);
 }
@@ -319,29 +332,24 @@ body {
   color: var(--accent-gold);
 }
 
-/* خطوات النص على الجانب */
+/* خطوات السرد على الجانب: أسلوب تحريري راقٍ بلا صناديق قاسية */
 .scrolly-steps-col {
   display: flex;
   flex-direction: column;
-  gap: 32vh;
+  gap: 34vh;
   padding-bottom: 25vh;
 }
 
 .step-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 2.25rem 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 2.25rem 1.75rem;
+  border-right: 1px solid var(--border-subtle);
   transition: border-color var(--duration-normal) var(--ease-out),
-              background-color var(--duration-normal) var(--ease-out),
               transform var(--duration-normal) var(--ease-out);
 }
 
 .step-card.active {
-  border-color: var(--border-accent);
-  background-color: rgba(23, 29, 35, 0.96);
-  transform: translateY(-2px);
+  border-right-color: var(--accent-gold);
+  transform: translateX(-4px);
 }
 
 .step-tag {
@@ -350,24 +358,25 @@ body {
   font-weight: 700;
   color: var(--accent-gold);
   margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
 }
 
 .step-heading {
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   font-weight: 700;
   color: var(--white);
   line-height: 1.4;
-  margin-bottom: 1rem;
+  margin-bottom: 1.15rem;
 }
 
 .step-text {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: var(--text-secondary);
-  line-height: 1.85;
+  line-height: 1.9;
 }
 
 .step-text p + p {
-  margin-top: 1rem;
+  margin-top: 1.15rem;
 }
 
 .highlight-gold {
@@ -380,11 +389,139 @@ body {
   font-weight: 700;
 }
 
-/* قسم الخريطة التفاعلية للمسارين */
-.map-section {
+/* 3. كاشف الثنائية التفاعلي (Split Lens Slider) */
+.split-lens-section {
+  padding: 6rem 1.5rem;
   background-color: var(--bg-base);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
+}
+
+.split-lens-header {
+  max-width: var(--reading-max);
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.split-lens-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.split-lens-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.split-slider-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  position: relative;
+  height: 520px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.split-view-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.split-view-layer.layer-trench {
+  z-index: 1;
+}
+
+.split-view-layer.layer-studio {
+  z-index: 2;
+  width: 50%;
+  overflow: hidden;
+  border-left: 1px solid var(--accent-gold);
+}
+
+.split-img {
+  width: 1040px;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.split-layer-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(9, 12, 15, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+  font-weight: 700;
+  z-index: 3;
+}
+
+.layer-studio .split-layer-badge {
+  right: 1.5rem;
+  color: var(--accent-red);
+  border-color: rgba(197, 68, 56, 0.4);
+}
+
+.layer-trench .split-layer-badge {
+  left: 1.5rem;
+  color: var(--accent-gold);
+  border-color: var(--border-accent);
+}
+
+/* مقبض السحب التفاعلي */
+.split-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: var(--accent-gold);
+  z-index: 10;
+  transform: translateX(-50%);
+  cursor: ew-resize;
+}
+
+.split-handle-knob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--bg-surface);
+  border: 2px solid var(--accent-gold);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+}
+
+.split-hint {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* 4. قسم الخريطة التفاعلية للمسارين */
+.map-section {
+  background-color: var(--bg-deep);
   padding: 5rem 1.5rem;
 }
 
@@ -510,83 +647,8 @@ body {
   line-height: 1.7;
 }
 
-/* قسم ميزان المفارقة */
-.balance-section {
-  padding: 5rem 1.5rem;
-  max-width: var(--container-max);
-  margin: 0 auto;
-}
-
-.balance-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.balance-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 2.5rem 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.balance-card.marketing {
-  border-top: 1px solid var(--accent-red);
-}
-
-.balance-card.heavy-story {
-  border-top: 1px solid var(--accent-gold);
-}
-
-.balance-icon {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.balance-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 1rem;
-}
-
-.balance-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  margin-top: 1.25rem;
-}
-
-.balance-list li {
-  font-size: 0.98rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  position: relative;
-  padding-right: 1.5rem;
-}
-
-.balance-list li::before {
-  content: "•";
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 1.2rem;
-}
-
-.balance-card.marketing .balance-list li::before {
-  color: var(--accent-red);
-}
-
-.balance-card.heavy-story .balance-list li::before {
-  color: var(--accent-gold);
-}
-
-/* قسم الخلاصة الحاسمة */
-.climax-section {
+/* 5. الختم الحجري المهيب للتحذير الختامي */
+.climax-monument-section {
   position: relative;
   padding: 7rem 1.5rem;
   background-color: var(--bg-climax);
@@ -596,21 +658,26 @@ body {
   overflow: hidden;
 }
 
-.climax-container {
+.monument-stone-slab {
   max-width: 860px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  padding: 3.5rem 2.5rem;
+  background: radial-gradient(circle at center, rgba(28, 34, 43, 0.6) 0%, rgba(11, 14, 18, 0.95) 100%);
+  border: 1px solid var(--border-accent);
+  border-radius: 6px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
 }
 
-.climax-ornament {
+.monument-ornament {
   width: 48px;
   height: 2px;
   background-color: var(--accent-gold);
   margin: 0 auto 2rem;
 }
 
-.climax-quote {
+.monument-quote {
   font-size: clamp(1.4rem, 2.8vw, 2.2rem);
   font-weight: 700;
   line-height: 1.65;
@@ -618,18 +685,18 @@ body {
   margin-bottom: 2rem;
 }
 
-.climax-quote .quote-danger {
+.monument-quote .quote-danger {
   color: var(--accent-gold);
   display: block;
   margin-top: 0.75rem;
 }
 
-.climax-author {
+.monument-author {
   font-size: 1.05rem;
   color: var(--text-muted);
 }
 
-.climax-author strong {
+.monument-author strong {
   color: var(--text-primary);
 }
 
@@ -711,12 +778,6 @@ body {
   color: var(--white);
   display: block;
   margin-bottom: 0.25rem;
-}
-
-.source-link {
-  color: var(--accent-gold);
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 
 /* المشاركة الهادئة */
@@ -918,7 +979,7 @@ body {
 .lightbox {
   position: fixed;
   inset: 0;
-  background-color: rgba(6, 8, 10, 0.95);
+  background-color: rgba(5, 7, 9, 0.95);
   backdrop-filter: blur(12px);
   z-index: 2000;
   display: flex;
@@ -1017,7 +1078,7 @@ body {
   }
 
   .step-card:hover {
-    border-color: rgba(201, 165, 87, 0.45);
+    border-right-color: var(--accent-gold);
   }
 
   .map-tab-btn:hover {
@@ -1074,13 +1135,13 @@ body {
     padding-bottom: 0;
   }
 
+  .split-slider-container {
+    height: 360px;
+  }
+
   .map-interactive-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .balance-grid {
-    grid-template-columns: 1fr;
   }
 
   .lb-prev {
@@ -1101,7 +1162,8 @@ body {
     scroll-behavior: auto !important;
   }
 
-  .reading-progress-bar {
+  .reading-progress-bar,
+  .hero-wave-canvas {
     display: none !important;
   }
 

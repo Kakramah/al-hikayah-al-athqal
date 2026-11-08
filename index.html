@@ -40,7 +40,7 @@
 
   <main id="top">
 
-    <!-- الافتتاحية الغامرة (الهيرو ولحظة التوقيع) -->
+    <!-- 1. الافتتاحية الغامرة مع موجة الأثير التفاعلية -->
     <section class="hero-section">
       <div class="hero-media-wrapper">
         <img src="images/hero-v1.webp" 
@@ -54,8 +54,11 @@
         <div class="hero-overlay"></div>
       </div>
 
+      <!-- كانفاس ذبذبات وموجة الأثير الحي -->
+      <canvas id="hero-wave-canvas" class="hero-wave-canvas" aria-hidden="true"></canvas>
+
       <div class="hero-content">
-        <div class="hero-badge">تحقيق وتأمل فكري</div>
+        <div class="hero-badge">وثيقة وتأمل فكري</div>
         <h1 class="hero-title">من يملك الحكاية الأثقل؟</h1>
         <p class="hero-lead">
           عن صعود موجة البودكاست في السوشيال ميديا السورية، ومصيدة أرقام المشاهدة، والفرق الجوهري بين أدوات التسويق وبين من دفع الثمن الحقيقي في الخنادق.
@@ -66,7 +69,7 @@
             النص الأصلي: <strong>زياد الصوفي</strong>
           </div>
           <div class="hero-meta-item">
-            المنهج: <strong>تحقيق غامر وتوثيق قيمي</strong>
+            المنهج: <strong>توثيق تحريري وتفاعل حي</strong>
           </div>
           <div class="hero-meta-item">
             زمن القراءة: <strong>4 دقائق</strong>
@@ -75,8 +78,8 @@
       </div>
     </section>
 
-    <!-- قسم السرد الغامر بالتمرير (Scrollytelling) -->
-    <section class="scrolly-container" aria-label="السرد الغامر">
+    <!-- 2. السرد التحريري الغامر (Scrollytelling) -->
+    <section class="scrolly-container" aria-label="السرد التحريري">
       <div class="scrolly-split">
 
         <!-- المسرح الصوري الثابت -->
@@ -142,7 +145,7 @@
           </div>
         </aside>
 
-        <!-- خطوات النص المتتابعة -->
+        <!-- نصوص السرد التحريري النقي -->
         <div class="scrolly-steps-col">
 
           <!-- الخطوة 1 -->
@@ -226,7 +229,54 @@
       </div>
     </section>
 
-    <!-- قسم الخريطة التفاعلية للمسارين -->
+    <!-- 3. كاشف الثنائية التفاعلي (Split Lens Slider) -->
+    <section class="split-lens-section" aria-label="كاشف الثنائية">
+      <div class="split-lens-header">
+        <h2 class="split-lens-title">كاشف الثنائية: الأثير في مواجهة الأرض</h2>
+        <p class="split-lens-desc">
+          اسحب المقبض في المنتصف لتكشف الفارق الجوهري بين بريق شاشات البث وأرقام المشاهدة، وبين صمت المقاتل المغمور في خنادق الداخل السوري.
+        </p>
+      </div>
+
+      <div class="split-slider-container">
+        <!-- طبقة الخندق (الخلفية) -->
+        <div class="split-view-layer layer-trench">
+          <img src="images/trench-v1.webp" 
+               alt="مقاتل سوري مغمور في خندق ترابي عند الفجر" 
+               class="split-img" 
+               width="1376" 
+               height="768" 
+               loading="lazy"
+               data-title="تراب الخندق ووجه المقاتل المغمور"
+               data-desc="من يملك الحكاية الأثقل وواجه الموت اليومي في صمت الميدان">
+          <div class="split-layer-badge">صاحب الحكاية الأثقل · خنادق الداخل</div>
+        </div>
+
+        <!-- طبقة الاستوديو (المتحركة بالسحب) -->
+        <div class="split-view-layer layer-studio">
+          <img src="images/studio-screens-v1.webp" 
+               alt="شاشات أرقام المشاهدات وأجهزة المونتاج المضاءة" 
+               class="split-img" 
+               width="1376" 
+               height="768" 
+               loading="lazy"
+               data-title="شاشات أرقام المشاهدة وأدوات البث"
+               data-desc="من يملك أدوات التسويق ومصيدة الخوارزميات في استوديو الأثير">
+          <div class="split-layer-badge">أدوات التسويق والمنصات · سباق المشاهدة</div>
+        </div>
+
+        <!-- مقبض السحب بالمنتصف -->
+        <div class="split-handle">
+          <div class="split-handle-knob">↔</div>
+        </div>
+      </div>
+
+      <div class="split-hint">
+        اسحب المقبض يميناً ويساراً أو استعمل مفتاحي السهمين بلوحة المفاتيح
+      </div>
+    </section>
+
+    <!-- 4. قسم الخريطة التفاعلية للمسارين -->
     <section class="map-section" aria-label="الخريطة التفاعلية للمسارين">
       <div class="map-header">
         <h2 class="map-title">جغرافية الثنائية: عواصم الشتات وخنادق الداخل</h2>
@@ -266,31 +316,24 @@
 
               <!-- مجموعة مسار الخارج (عواصم العالم) -->
               <g id="map-group-abroad">
-                <!-- خطوط الاتصال من سوريا إلى العواصم -->
                 <path d="M 520,270 Q 420,180 280,140" fill="none" stroke="#4a9ea8" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
                 <path d="M 520,270 Q 380,120 210,110" fill="none" stroke="#4a9ea8" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
                 <path d="M 520,270 Q 460,200 420,180" fill="none" stroke="#4a9ea8" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
                 <path d="M 520,270 Q 300,100 100,160" fill="none" stroke="#4a9ea8" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
 
-                <!-- نقطة الانطلاق: دمشق / سوريا -->
                 <circle cx="520" cy="270" r="14" fill="url(#glow-gold)"/>
                 <circle cx="520" cy="270" r="5" fill="#c9a557"/>
                 <text x="535" y="275" fill="#e6ebed" font-size="12" font-family="'IBM Plex Sans Arabic', sans-serif">سوريا (المنطلق)</text>
 
-                <!-- عواصم العالم والسفارات -->
-                <!-- إسطنبول -->
                 <circle cx="420" cy="180" r="6" fill="#4a9ea8"/>
                 <text x="430" y="175" fill="#adb9be" font-size="11" font-family="'IBM Plex Sans Arabic', sans-serif">إسطنبول · منصات وإعلام</text>
 
-                <!-- جنيف -->
                 <circle cx="280" cy="140" r="6" fill="#4a9ea8"/>
                 <text x="290" y="135" fill="#adb9be" font-size="11" font-family="'IBM Plex Sans Arabic', sans-serif">جنيف · مسار أممي</text>
 
-                <!-- برلين / باريس -->
                 <circle cx="210" cy="110" r="7" fill="#4a9ea8"/>
                 <text x="130" y="105" fill="#adb9be" font-size="11" font-family="'IBM Plex Sans Arabic', sans-serif">برلين وباريس · اعتصامات السفارات</text>
 
-                <!-- واشنطن -->
                 <circle cx="100" cy="160" r="6" fill="#4a9ea8"/>
                 <text x="25" y="180" fill="#adb9be" font-size="11" font-family="'IBM Plex Sans Arabic', sans-serif">واشنطن · مقالات ومناصرة</text>
 
@@ -301,29 +344,23 @@
 
               <!-- مجموعة مسار الداخل (الخنادق السورية) -->
               <g id="map-group-inside" style="display: none;">
-                <!-- حدود رمزية دقيقة ومراكز خنادق -->
-                <!-- إدلب وريف حلب -->
                 <circle cx="505" cy="220" r="22" fill="url(#glow-gold)"/>
                 <circle cx="505" cy="220" r="7" fill="#c9a557"/>
                 <text x="410" y="215" fill="#ffffff" font-size="13" font-weight="700" font-family="'IBM Plex Sans Arabic', sans-serif">ريف إدلب وحلب · خطوط التماس</text>
                 <text x="410" y="235" fill="#adb9be" font-size="10" font-family="'IBM Plex Sans Arabic', sans-serif">خنادق الموت اليومي والرباط الصامت</text>
 
-                <!-- حمص وريفها -->
                 <circle cx="515" cy="265" r="18" fill="url(#glow-gold)"/>
                 <circle cx="515" cy="265" r="6" fill="#c9a557"/>
                 <text x="430" y="270" fill="#ffffff" font-size="12" font-weight="700" font-family="'IBM Plex Sans Arabic', sans-serif">حمص والوسط</text>
 
-                <!-- الغوطة الشرقية -->
                 <circle cx="530" cy="300" r="18" fill="url(#glow-gold)"/>
                 <circle cx="530" cy="300" r="6" fill="#c9a557"/>
                 <text x="545" y="305" fill="#ffffff" font-size="12" font-weight="700" font-family="'IBM Plex Sans Arabic', sans-serif">غوطة دمشق · الحصار والصمود</text>
 
-                <!-- درعا والجنوب -->
                 <circle cx="525" cy="350" r="18" fill="url(#glow-gold)"/>
                 <circle cx="525" cy="350" r="6" fill="#c9a557"/>
                 <text x="440" y="355" fill="#ffffff" font-size="12" font-weight="700" font-family="'IBM Plex Sans Arabic', sans-serif">مهد الثورة درعا</text>
 
-                <!-- خطوط الترابط بين جبهات الخنادق -->
                 <path d="M 505,220 L 515,265 L 530,300 L 525,350" fill="none" stroke="#c9a557" stroke-width="2.5" stroke-dasharray="4,4"/>
 
                 <text x="350" y="380" text-anchor="middle" fill="#c9a557" font-size="13" font-weight="700" font-family="'IBM Plex Sans Arabic', sans-serif">
@@ -347,48 +384,15 @@
       </div>
     </section>
 
-    <!-- قسم ميزان المفارقة الأخلاقية -->
-    <section class="balance-section" aria-label="ميزان المفارقة">
-      <div class="balance-grid">
-        <div class="balance-card marketing">
-          <div class="balance-icon">🎙️</div>
-          <h3 class="balance-title">أدوات التسويق والمنصات</h3>
-          <p class="step-text">
-            حسابات المشاهدات، والبحث عن العناوين الجاذبة وإثارة اللحظات الانفعالية.
-          </p>
-          <ul class="balance-list">
-            <li>خوارزميات تصنع نجوماً وتبحث عن ريع الإعلانات.</li>
-            <li>أسئلة محسوبة تجر الضيف إلى منطقة العنتريات والتباهي.</li>
-            <li>ملء ساعات البث بحكايات شخصية متكررة تضفي وزناً وهمياً.</li>
-            <li>تحويل الذاكرة إلى مسابقة في البطولة واستعراض أوسمة لم تُحمل.</li>
-          </ul>
-        </div>
-
-        <div class="balance-card heavy-story">
-          <div class="balance-icon">🛡️</div>
-          <h3 class="balance-title">صاحب الحكاية الأثقل</h3>
-          <p class="step-text">
-            مقاتل الخندق وأهالي الشهداء الذين دفعوا الأثمان الباهظة في صمت كامل.
-          </p>
-          <ul class="balance-list">
-            <li>عاش الثورة في خنادقها وواجه الموت في تفاصيله الحقيقية.</li>
-            <li>فقد الأبناء والبيت والمستقبل دون أن يطلب كاميرا أو منصة.</li>
-            <li>لا يحتاج إلى بودكاست لتصبح تضحياته واقعاً ثابتاً في ضمير وطنه.</li>
-            <li>الحكاية الأثقل التي لا تصنع منها الخوارزميات نجماً ولا تجلب ريعاً.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- قسم الخلاصة الحاسمة والتحذير الجوهري -->
-    <section class="climax-section" aria-label="الخلاصة والتحذير المحوري">
-      <div class="climax-container">
-        <div class="climax-ornament"></div>
-        <blockquote class="climax-quote">
+    <!-- 5. الختم الحجري المهيب للتحذير الجوهري -->
+    <section class="climax-monument-section" aria-label="النقش الحجري الختامي">
+      <div class="monument-stone-slab">
+        <div class="monument-ornament"></div>
+        <blockquote class="monument-quote">
           وأخشى ما أخشاه أن نكون قد انتصرنا على نظام صادر تاريخ السوريين،
           <span class="quote-danger">ثم نبدأ نحن بمصادرة تاريخ الثورة، كل على مقاس سيرته الذاتية..</span>
         </blockquote>
-        <div class="climax-author">
+        <div class="monument-author">
           نص الكاتب والناشط: <strong>زياد الصوفي</strong>
         </div>
       </div>
@@ -410,8 +414,8 @@
             منشور الكاتب والناشط السوري زياد الصوفي حول ظاهرة صعود بودكاست الثورة ومأزق مصادرة التاريخ.
           </li>
           <li class="source-item">
-            <strong>المرجع التصميمي والمنهجي:</strong>
-            مستوحى من وصفة المرجع 18 (كيف وقعت إيران في الشباك الأمريكية · استقصاء إيكاد) والمرجع 13 (من دفع الثمن) في بنك أساليب خلدون عكرمة.
+            <strong>الإخراج البصري:</strong>
+            أسلوب توثيقي استثنائي يجمع بين كانفاس موجة الأثير الحية، وكاشف الثنائية التفاعلي، والطباعة التحريرية الرفيعة.
           </li>
           <li class="source-item">
             <strong>الأصول والصور:</strong>
