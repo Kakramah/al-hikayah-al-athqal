@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الحكاية الأثقل · عن بودكاست الثورة ومصادرة التاريخ</title>
+  <meta name="description" content="تأمل فكري وقراءة نقدية في صعود موجة بودكاست الثورة السورية ومصيدة الخوارزميات، في مقابل خنادق المقاتلين المغمورين وحماية تاريخ الثورة من المصادرة.">
+  <meta name="author" content="𝓚𝓱𝓪𝓵𝓭𝓸𝓾𝓷𝓐𝓴𝓻𝓪𝓶𝓪𝓱">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / فيسبوك -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="الحكاية الأثقل · عن بودكاست الثورة ومصادرة التاريخ">
+  <meta property="og:description" content="تأمل فكري وقراءة نقدية في صعود موجة بودكاست الثورة السورية ومصيدة الخوارزميات، في مقابل خنادق المقاتلين المغمورين وحماية تاريخ الثورة من المصادرة.">
+  <meta property="og:image" content="https://kakramah.github.io/al-hikayah-al-athqal/images/og-image.jpg">
+  <meta property="og:url" content="https://kakramah.github.io/al-hikayah-al-athqal/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="الحكاية الأثقل · عن بودكاست الثورة ومصادرة التاريخ">
+  <meta name="twitter:description" content="تأمل فكري وقراءة نقدية في صعود موجة بودكاست الثورة السورية ومصيدة الخوارزميات، في مقابل خنادق المقاتلين المغمورين وحماية تاريخ الثورة من المصادرة.">
+  <meta name="twitter:image" content="https://kakramah.github.io/al-hikayah-al-athqal/images/og-image.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- شريط القراءة في أعلى الشاشة -->
+  <div class="reading-progress-bar" role="progressbar" aria-label="تقدم قراءة التحقيق"></div>
+
+  <!-- شريط التنقل العلوي -->
+  <header class="site-nav">
+    <a href="#top" class="nav-brand" aria-label="العودة لأعلى الصفحة">
+      <img src="images/eagle-emblem-metal.svg" alt="شعار عقاب الثورة" class="nav-eagle" width="32" height="24">
+      <span class="nav-title">الحكاية الأثقل</span>
+    </a>
+    <span class="nav-meta">نص: زياد الصوفي</span>
+  </header>
+
+  <main id="top">
+
+    <!-- الافتتاحية الغامرة (الهيرو ولحظة التوقيع) -->
+    <section class="hero-section">
+      <div class="hero-media-wrapper">
+        <img src="images/hero-v1.webp" 
+             alt="ميكروفون تسجيل إذاعي مطفأ داخل استوديو معتم أمام مقاعد فارغة" 
+             class="hero-img" 
+             width="1376" 
+             height="768" 
+             fetchpriority="high"
+             data-title="استوديو معتم وميكروفون مطفأ"
+             data-desc="صمت مقاعد البث ورفض ملء ساعات الأثير ببطولات وهمية">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge">تحقيق وتأمل فكري</div>
+        <h1 class="hero-title">من يملك الحكاية الأثقل؟</h1>
+        <p class="hero-lead">
+          عن صعود موجة البودكاست في السوشيال ميديا السورية، ومصيدة أرقام المشاهدة، والفرق الجوهري بين أدوات التسويق وبين من دفع الثمن الحقيقي في الخنادق.
+        </p>
+
+        <div class="hero-meta-bar">
+          <div class="hero-meta-item">
+            النص الأصلي: <strong>زياد الصوفي</strong>
+          </div>
+          <div class="hero-meta-item">
+            المنهج: <strong>تحقيق غامر وتوثيق قيمي</strong>
+          </div>
+          <div class="hero-meta-item">
+            زمن القراءة: <strong>4 دقائق</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم السرد الغامر بالتمرير (Scrollytelling) -->
+    <section class="scrolly-container" aria-label="السرد الغامر">
+      <div class="scrolly-split">
+
+        <!-- المسرح الصوري الثابت -->
+        <aside class="scrolly-sticky-stage" aria-hidden="true">
+          <!-- مشهد 1: الخارج والشتات -->
+          <div class="stage-layer active" data-layer="1">
+            <img src="images/abroad-v1.webp" 
+                 alt="ناشط سوري يقف أمام سفارة في عاصمة أوروبية تحت المطر" 
+                 class="stage-img" 
+                 width="1376" 
+                 height="768" 
+                 loading="lazy"
+                 data-title="عواصم الشتات والسفارات"
+                 data-desc="ناشط في ساحة أوروبية يحمل علم الثورة ويختصر تجربته في أسطر معدودة">
+            <div class="stage-caption">
+              <strong>عواصم الشتات:</strong> ثمانون بالمئة خارج سوريا، والاعتصامات والمقالات.
+            </div>
+          </div>
+
+          <!-- مشهد 2: خندق المقاتل المغمور -->
+          <div class="stage-layer" data-layer="2">
+            <img src="images/trench-v1.webp" 
+                 alt="مقاتل سوري مغمور في خندق ترابي ريفي عند الفجر" 
+                 class="stage-img" 
+                 width="1376" 
+                 height="768" 
+                 loading="lazy"
+                 data-title="خندق المقاتل المغمور"
+                 data-desc="مواجهة الموت اليومي في ريف إدلب وحلب بعيداً عن أضواء الخوارزميات">
+            <div class="stage-caption">
+              <strong>خنادق الداخل:</strong> مواجهة الموت اليومي بعيداً عن أضواء الخوارزميات.
+            </div>
+          </div>
+
+          <!-- مشهد 3: شاشات الاستوديو والأرقام -->
+          <div class="stage-layer" data-layer="3">
+            <img src="images/studio-screens-v1.webp" 
+                 alt="شاشات مونتاج معتمة تعرض أرقام المشاهدات وأجهزة الصوت" 
+                 class="stage-img" 
+                 width="1376" 
+                 height="768" 
+                 loading="lazy"
+                 data-title="شاشات التحليلات وأرقام المشاهدة"
+                 data-desc="مطاردة المشاهدات والإعلانات في مقابل غياب صاحب الحكاية الأثقل">
+            <div class="stage-caption">
+              <strong>مصيدة المنصات:</strong> البحث عن الإعلانات ونسب المشاركة وإثارة العنتريات.
+            </div>
+          </div>
+
+          <!-- مشهد 4: جدار الشهداء والذاكرة -->
+          <div class="stage-layer" data-layer="4">
+            <img src="images/memorial-v1.webp" 
+                 alt="جدار حجري سوري قديم عليه صور شهداء معلقة بمسامير قديمة" 
+                 class="stage-img" 
+                 width="1376" 
+                 height="768" 
+                 loading="lazy"
+                 data-title="جدار الذاكرة والصور المعلقة"
+                 data-desc="شهداء وأبطال مجهولون لا يحتاجون لبودكاست لتصبح تضحيتهم حقيقية">
+            <div class="stage-caption">
+              <strong>ثمن الكرامة:</strong> الذين دفعوا حياتهم وبيوتهم ولم يعرف أحد أسماءهم.
+            </div>
+          </div>
+        </aside>
+
+        <!-- خطوات النص المتتابعة -->
+        <div class="scrolly-steps-col">
+
+          <!-- الخطوة 1 -->
+          <article class="step-card active" data-step="1">
+            <span class="step-tag">السياق والاعتذار المتكرر</span>
+            <h2 class="step-heading">ثلاثة أسطر لا تستهلك وقت أحد</h2>
+            <div class="step-text">
+              <p>
+                منذ سنتين، ومع صعود موجة البودكاست في السوشيال ميديا السورية، وصلتني دعوات كثيرة للمشاركة والحديث عن سنوات الثورة، وعن التفاصيل التي عشناها، وما رافقها من محطات وتجارب.
+              </p>
+              <p>
+                وفي كل مرة، كنت أعتذر، ليس لأنني لا أملك ما أقوله، ولا لأنني لا أقدّر هذه المساحات، بل لأنني كنت أسأل نفسي قبل الاعتذار:
+              </p>
+              <p>
+                ماذا سيقول ناشط ثوري أمضى <span class="highlight-gold">ثمانين بالمئة من سنوات الثورة خارج سوريا</span>؟ كتب المقالات والمنشورات، وشارك في الاعتصامات أمام السفارات وفي عواصم العالم، وحاول أن يبقي صوت السوريين حاضراً في كل مكان استطاع الوصول إليه؟
+              </p>
+              <p>
+                كل ما يمكنني قوله عن تجربتي أستطيع اختصاره في ثلاثة أسطر، كما فعلت الآن، من دون أن أستهلك وقت المستمع أو المشاهد في سرد تفاصيل شخصية تشبه، إلى حد كبير، حكاية ملايين السوريين الذين غادروا بلادهم، وحملوا ثورتهم معهم، وناضلوا من خارجها كل بطريقته وإمكاناته.
+              </p>
+            </div>
+          </article>
+
+          <!-- الخطوة 2 -->
+          <article class="step-card" data-step="2">
+            <span class="step-tag">صاحب الحكاية الأثقل</span>
+            <h2 class="step-heading">المقاتل المغمور في خنادق الموت</h2>
+            <div class="step-text">
+              <p>
+                وربما كان الأجدر بهذه المنصات أن تبحث عن <span class="highlight-gold">مقاتل مغمور</span>، لم يسمع به كثيرون، ولم تصنع منه الخوارزميات نجماً، لكنه عاش الثورة في خنادقها، وواجه الموت في تفاصيلها اليومية.
+              </p>
+              <p>
+                ذلك المقاتل لديه من الحكايات والتجارب ما يفوق بكثير كل ما أمضينا أعمارنا في الكتابة عنه والدفاع عن الثورة من بعيد.
+              </p>
+              <p>
+                هناك في الطين والغبار، كُتبت الحكاية التي لا تحتاج إلى فلاتر ولا مؤثرات صوتية لتثبت صدقها.
+              </p>
+            </div>
+          </article>
+
+          <!-- الخطوة 3 -->
+          <article class="step-card" data-step="3">
+            <span class="step-tag">المفارقة والخوارزمية</span>
+            <h2 class="step-heading">من يملك الحكاية ومن يملك التسويق؟</h2>
+            <div class="step-text">
+              <p>
+                لكن المشكلة أن هذا المقاتل قد لا يجلب إعلانات، ولا يضمن أرقام مشاهدة مرتفعة، ولا يحقق نسب المشاركة التي تبحث عنها المنصة.
+              </p>
+              <p>
+                وهنا تبدأ المفارقة الكبرى: <span class="highlight-gold">من يملك الحكاية الأثقل قد لا يملك أدوات تسويقها</span>، ومن يملك أدوات التسويق ليس بالضرورة صاحب الحكاية الأثقل.
+              </p>
+              <p>
+                لا أريد أن أخترع قصصاً، أو أستحضر بطولات وهمية، أو أضيف إلى سيرتي ما لم يحدث، فقط لملء ساعات البث وإضفاء وزن إضافي على تجربة شخصية.
+              </p>
+              <p>
+                ولا أريد أن أقع في المصيدة المعتادة التي ينصبها بعض المحاورين، حين يحاولون جر الضيف بأسئلة محسوبة إلى <span class="highlight-red">منطقة العنتريات والتباهي</span>، بحثاً عن جملة مثيرة أو لحظة انفعال تصلح عنواناً للمقطع التالي.
+              </p>
+            </div>
+          </article>
+
+          <!-- الخطوة 4 -->
+          <article class="step-card" data-step="4">
+            <span class="step-tag">جوهر المبدأ</span>
+            <h2 class="step-heading">الثورة ليست مقعداً أمام كاميرا</h2>
+            <div class="step-text">
+              <p>
+                فالثورة ليست مسابقة في البطولة، وليست سجلاً شخصياً لتعداد المغامرات، وليست فرصة متأخرة لمنح أنفسنا أوسمة لم نحملها.
+              </p>
+              <p>
+                لقد أمضينا سنوات ندافع عن ثورة كي يستعيد السوريون وطنهم وكرامتهم، <span class="highlight-gold">لا كي نحصل نحن على مقعد أمام كاميرا</span>، ونروي للناس كم كنا عظماء.
+              </p>
+              <p>
+                هناك من دفع حياته ثمناً لهذه الثورة، وهناك من فقد أبناءه وبيته ومستقبله، وهناك من قاتل ولم يعرف أحد اسمه، ولن يعرفه أحد.
+              </p>
+              <p>
+                هؤلاء لا يحتاجون إلى بودكاست كي تصبح تضحياتهم حقيقية، ولا يحتاجون إلى روايتنا كي يمنحهم التاريخ مكاناً يستحقونه.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الخريطة التفاعلية للمسارين -->
+    <section class="map-section" aria-label="الخريطة التفاعلية للمسارين">
+      <div class="map-header">
+        <h2 class="map-title">جغرافية الثنائية: عواصم الشتات وخنادق الداخل</h2>
+        <p class="map-subtitle">
+          مقارنة حية بين مسار النشاط من خارج الحدود ومسار التضحية الصامتة داخل الخنادق السورية.
+        </p>
+      </div>
+
+      <div class="map-interactive-container">
+        <div class="map-visual-col">
+          <div class="map-controls-tabs" role="tablist" aria-label="تبديل الخريطة">
+            <button type="button" class="map-tab-btn active" role="tab" aria-selected="true" data-target="abroad">
+              عواصم الشتات والسفارات (أدوات التسويق)
+            </button>
+            <button type="button" class="map-tab-btn" role="tab" aria-selected="false" data-target="inside">
+              خنادق الداخل الصامتة (الحكاية الأثقل)
+            </button>
+          </div>
+
+          <div class="map-svg-wrapper">
+            <svg viewBox="0 0 700 420" class="map-svg" aria-label="خريطة توضيحية لثنائية المسارات">
+              <defs>
+                <radialGradient id="glow-gold" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#c9a557" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#c9a557" stop-opacity="0"/>
+                </radialGradient>
+                <radialGradient id="glow-red" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#c54438" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#c54438" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+
+              <!-- خلفية شبكية جغرافية مبسطة -->
+              <rect x="0" y="0" width="700" height="420" fill="#090d11"/>
+              <path d="M 50,0 V 420 M 150,0 V 420 M 250,0 V 420 M 350,0 V 420 M 450,0 V 420 M 550,0 V 420 M 650,0 V 420" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+              <path d="M 0,60 H 700 M 0,140 H 700 M 0,220 H 700 M 0,300 H 700 M 0,380 H 700" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+              <!-- مجموعة مسار الخارج (عواصم العالم) -->
+              <g id="map-group-abroad">
+                <!-- خطوط الاتصال من سوريا إلى العواصم -->
+                <path d="M 520,270 Q 420,180 280,140" fill="none" stroke="#4a9ea8" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
+                <path d="M 520,270 Q 380,120 210,110" fill="none" stroke="#4a9ea8" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
+                <path d="M 520,270 Q 460,200 420,180" fill="none" stroke="#4a9ea8" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
+                <path d="M 520,270 Q 300,100 100,160" fill="none" stroke="#4a9ea8" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
+
+                <!-- نقطة الانطلاق: دمشق / سوريا -->
+                <circle cx="520" cy="270" r="14" fill="url(#glow-gold)"/>
+                <circle cx="520" cy="270" r="5" fill="#c9a557"/>
+                <text x="535" y="275" fill="#e6ebed" font-size="12" font-family="'IBM Plex Sans Arabic', sans-serif">سوريا (المنطلق)</text>
+
+                <!-- عواصم العالم والسفارات -->
+                <!-- إسطنبول -->
+                <circle cx="420" cy="180" r="6" fill="#4a9ea8"/>
+                <text x="430" y="175" fill="#adb9be" font-size="11" font-family="'IBM Plex Sans Arabic', sans-serif">إسطنبول · منصات وإعلام</text>
+
+                <!-- جنيف -->
+                <circle cx="280" cy="140" r="6" fill="#4a9ea8"/>
+                <text x="290" y="135" fill="#adb9be" font-size="11" font-family="'IBM Plex Sans Arabic', sans-serif">جنيف · مسار أممي</text>
+
+                <!-- برلين / باريس -->
+                <circle cx="210" cy="110" r="7" fill="#4a9ea8"/>
+                <text x="130" y="105" fill="#adb9be" font-size="11" font-family="'IBM Plex Sans Arabic', sans-serif">برلين وباريس · اعتصامات السفارات</text>
+
+                <!-- واشنطن -->
+                <circle cx="100" cy="160" r="6" fill="#4a9ea8"/>
+                <text x="25" y="180" fill="#adb9be" font-size="11" font-family="'IBM Plex Sans Arabic', sans-serif">واشنطن · مقالات ومناصرة</text>
+
+                <text x="350" y="380" text-anchor="middle" fill="#c9a557" font-size="13" font-weight="700" font-family="'IBM Plex Sans Arabic', sans-serif">
+                  المسار الرقمي والسياسي: 80% من سنوات الثورة خارج الحدود
+                </text>
+              </g>
+
+              <!-- مجموعة مسار الداخل (الخنادق السورية) -->
+              <g id="map-group-inside" style="display: none;">
+                <!-- حدود رمزية دقيقة ومراكز خنادق -->
+                <!-- إدلب وريف حلب -->
+                <circle cx="505" cy="220" r="22" fill="url(#glow-gold)"/>
+                <circle cx="505" cy="220" r="7" fill="#c9a557"/>
+                <text x="410" y="215" fill="#ffffff" font-size="13" font-weight="700" font-family="'IBM Plex Sans Arabic', sans-serif">ريف إدلب وحلب · خطوط التماس</text>
+                <text x="410" y="235" fill="#adb9be" font-size="10" font-family="'IBM Plex Sans Arabic', sans-serif">خنادق الموت اليومي والرباط الصامت</text>
+
+                <!-- حمص وريفها -->
+                <circle cx="515" cy="265" r="18" fill="url(#glow-gold)"/>
+                <circle cx="515" cy="265" r="6" fill="#c9a557"/>
+                <text x="430" y="270" fill="#ffffff" font-size="12" font-weight="700" font-family="'IBM Plex Sans Arabic', sans-serif">حمص والوسط</text>
+
+                <!-- الغوطة الشرقية -->
+                <circle cx="530" cy="300" r="18" fill="url(#glow-gold)"/>
+                <circle cx="530" cy="300" r="6" fill="#c9a557"/>
+                <text x="545" y="305" fill="#ffffff" font-size="12" font-weight="700" font-family="'IBM Plex Sans Arabic', sans-serif">غوطة دمشق · الحصار والصمود</text>
+
+                <!-- درعا والجنوب -->
+                <circle cx="525" cy="350" r="18" fill="url(#glow-gold)"/>
+                <circle cx="525" cy="350" r="6" fill="#c9a557"/>
+                <text x="440" y="355" fill="#ffffff" font-size="12" font-weight="700" font-family="'IBM Plex Sans Arabic', sans-serif">مهد الثورة درعا</text>
+
+                <!-- خطوط الترابط بين جبهات الخنادق -->
+                <path d="M 505,220 L 515,265 L 530,300 L 525,350" fill="none" stroke="#c9a557" stroke-width="2.5" stroke-dasharray="4,4"/>
+
+                <text x="350" y="380" text-anchor="middle" fill="#c9a557" font-size="13" font-weight="700" font-family="'IBM Plex Sans Arabic', sans-serif">
+                  الميدان المباشر: المقاتل المغمور الذي واجه الموت بلا كاميرات
+                </text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="map-details-panel">
+          <span class="map-panel-tag">تفاصيل المسار</span>
+          <h3 id="map-panel-title" class="map-panel-title">عواصم الشتات ومقاعد البث</h3>
+          <p id="map-panel-text" class="map-panel-text">
+            ناشطون كتبوا المقالات والمنشورات، وشاركوا في الاعتصامات أمام السفارات في عواصم العالم، وحملوا الثورة بصوتهم من الخارج، لكنهم يعلمون أن تجربتهم تختصر في أسطر معدودة ولا تقارن بمن دفع الثمن في الميدان.
+          </p>
+          <div id="map-panel-quote" class="map-panel-quote">
+            ماذا سيقول ناشط ثوري أمضى ثمانين بالمئة من سنوات الثورة خارج سوريا؟ كتب المقالات والمنشورات، وشارك في الاعتصامات أمام السفارات وفي عواصم العالم..
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم ميزان المفارقة الأخلاقية -->
+    <section class="balance-section" aria-label="ميزان المفارقة">
+      <div class="balance-grid">
+        <div class="balance-card marketing">
+          <div class="balance-icon">🎙️</div>
+          <h3 class="balance-title">أدوات التسويق والمنصات</h3>
+          <p class="step-text">
+            حسابات المشاهدات، والبحث عن العناوين الجاذبة وإثارة اللحظات الانفعالية.
+          </p>
+          <ul class="balance-list">
+            <li>خوارزميات تصنع نجوماً وتبحث عن ريع الإعلانات.</li>
+            <li>أسئلة محسوبة تجر الضيف إلى منطقة العنتريات والتباهي.</li>
+            <li>ملء ساعات البث بحكايات شخصية متكررة تضفي وزناً وهمياً.</li>
+            <li>تحويل الذاكرة إلى مسابقة في البطولة واستعراض أوسمة لم تُحمل.</li>
+          </ul>
+        </div>
+
+        <div class="balance-card heavy-story">
+          <div class="balance-icon">🛡️</div>
+          <h3 class="balance-title">صاحب الحكاية الأثقل</h3>
+          <p class="step-text">
+            مقاتل الخندق وأهالي الشهداء الذين دفعوا الأثمان الباهظة في صمت كامل.
+          </p>
+          <ul class="balance-list">
+            <li>عاش الثورة في خنادقها وواجه الموت في تفاصيله الحقيقية.</li>
+            <li>فقد الأبناء والبيت والمستقبل دون أن يطلب كاميرا أو منصة.</li>
+            <li>لا يحتاج إلى بودكاست لتصبح تضحياته واقعاً ثابتاً في ضمير وطنه.</li>
+            <li>الحكاية الأثقل التي لا تصنع منها الخوارزميات نجماً ولا تجلب ريعاً.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الخلاصة الحاسمة والتحذير الجوهري -->
+    <section class="climax-section" aria-label="الخلاصة والتحذير المحوري">
+      <div class="climax-container">
+        <div class="climax-ornament"></div>
+        <blockquote class="climax-quote">
+          وأخشى ما أخشاه أن نكون قد انتصرنا على نظام صادر تاريخ السوريين،
+          <span class="quote-danger">ثم نبدأ نحن بمصادرة تاريخ الثورة، كل على مقاس سيرته الذاتية..</span>
+        </blockquote>
+        <div class="climax-author">
+          نص الكاتب والناشط: <strong>زياد الصوفي</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- درج المصادر والمراجع (مغلق افتراضياً) -->
+    <section class="sources-section" aria-label="المصادر والمراجع">
+      <button type="button" class="sources-toggle" aria-expanded="false" aria-controls="sources-drawer">
+        <span>المصادر وملاحظات التوثيق</span>
+        <svg class="sources-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        </svg>
+      </button>
+
+      <div id="sources-drawer" class="sources-drawer">
+        <ul class="sources-list">
+          <li class="source-item">
+            <strong>نص المقال والشهادة:</strong>
+            منشور الكاتب والناشط السوري زياد الصوفي حول ظاهرة صعود بودكاست الثورة ومأزق مصادرة التاريخ.
+          </li>
+          <li class="source-item">
+            <strong>المرجع التصميمي والمنهجي:</strong>
+            مستوحى من وصفة المرجع 18 (كيف وقعت إيران في الشباك الأمريكية · استقصاء إيكاد) والمرجع 13 (من دفع الثمن) في بنك أساليب خلدون عكرمة.
+          </li>
+          <li class="source-item">
+            <strong>الأصول والصور:</strong>
+            تصورات بصرية سينمائية موثقة بمعيار البيت (ARRI Alexa, Leica M10, Hasselblad) لخدمة المعنى الأخلاقي والتوثيقي دون اختلاق أو تضليل.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- كتلة المشاركة الهادئة -->
+    <div class="share-block">
+      <div class="share-title">شارك هذا التحليل التوثيقي</div>
+      <button type="button" class="share-btn">
+        <span>نسخ رابط الصفحة</span>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- نافذة معرض الصور (Lightbox) -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="معرض الصور" hidden>
+    <div class="lb-dialog">
+      <button type="button" class="lb-close" aria-label="إغلاق المعرض">✕</button>
+      <button type="button" class="lb-btn lb-prev" aria-label="الصورة السابقة">›</button>
+      <img alt="" class="lb-img">
+      <div class="lb-caption">
+        <h3 class="lb-title"></h3>
+        <p class="lb-desc"></p>
+      </div>
+      <button type="button" class="lb-btn lb-next" aria-label="الصورة التالية">‹</button>
+    </div>
+  </div>
+
+  <!-- بطاقة الذيل المعتمدة (الهوية ونموذج المراسلة) -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <h2 class="footer-form-title">تواصل مع خلدون عكرمة</h2>
+      <p class="footer-form-desc">أرسل رأيك أو ملاحظتك حول هذا العمل التوثيقي.</p>
+
+      <form class="footer-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="2527772c-69c7-4bd9-9319-a5b705e44bac">
+        <input type="hidden" name="subject" value="رسالة جديدة من موقع: الحكاية الأثقل">
+        <input type="hidden" name="from_name" value="موقع الحكاية الأثقل">
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+        <div class="form-group">
+          <input type="text" name="name" class="form-input" placeholder="الاسم الكريم" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" class="form-input" placeholder="البريد الإلكتروني" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" class="form-textarea" placeholder="نص الرسالة.." required></textarea>
+        </div>
+
+        <button type="submit" class="form-submit-btn">إرسال الرسالة</button>
+        <div class="form-feedback success-message" aria-live="polite"></div>
+      </form>
+
+      <div class="footer-identity">
+        <div class="footer-signature">
+          جميع الحقوق محفوظة © 2026 · <bdo dir="ltr">@𝓚𝓱𝓪𝓵𝓭𝓸𝓾𝓷𝓐𝓴𝓻𝓪𝓶𝓪𝓱</bdo>
+        </div>
+
+        <img src="images/eagle-emblem-metal.svg" alt="عقاب الثورة السورية" class="footer-eagle-img" width="54" height="41">
+
+        <div class="footer-social-row">
+          <a href="https://wa.me/966566702030" class="social-icon-link" target="_blank" rel="noopener noreferrer" title="واتساب" aria-label="واتساب">
+            <svg viewBox="0 0 24 24" class="social-svg" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.41a8.164 8.164 0 0 1 2.4 5.83c0 4.54-3.7 8.24-8.24 8.24-1.47 0-2.91-.39-4.17-1.14l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.24-8.24v-.02zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+          </a>
+          <a href="https://instagram.com/khaldounakramah" class="social-icon-link" target="_blank" rel="noopener noreferrer" title="إنستغرام" aria-label="إنستغرام">
+            <svg viewBox="0 0 24 24" class="social-svg" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="mailto:akramahkhaldoun@gmail.com" class="social-icon-link" title="البريد" aria-label="البريد الإلكتروني">
+            <svg viewBox="0 0 24 24" class="social-svg" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
